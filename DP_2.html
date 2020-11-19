@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 4px solid black;
+  margin: 3px;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV">
+  <p>Apple</p>
+  <p>Orange</p>
+  <p>Strawberry</p>
+  <p>Pine Apple</p>
+</div>
+
+<p>Let's find out how many fruits we have?</p>
+
+<button onclick="myFunction()">count</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV").getElementsByTagName("P");
+  document.getElementById("demo").innerHTML = x.length;
+}
+</script>
+
+</body>
+</html>
+
