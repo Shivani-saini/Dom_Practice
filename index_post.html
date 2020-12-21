@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Change the Doc</title>
+         <meta name= "viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <div class= "container">
+           <!-- <form class='form' id="myform">
+               <label for="i_username"> Username </label>
+               <input type="text" name="i_username" id="i_username">
+               <label for= "i_password"> Password </label> 
+               <input type= "password" name="i_password" id="i_password">
+               <button type="submit"> Login </button>
+           </form> -->
+       </div> 
+           <script type= "text/javascript">
+                async function post(){
+                    let response = await fetch('/echo', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify({name: 'nidhi'})
+                    });
+                    let result = await response.json();
+                    alert(result.name);
+                }
+                post()
+           </script>
+    </body>
+</html>
+
+<!-- const myform = document.getElementById('myform');
+
+              myForm.addEventListener('submit', function(e){
+                e.preventDefault();
+
+                const formData = new formData(this);
+
+                fetch()
+              })
+   -->
